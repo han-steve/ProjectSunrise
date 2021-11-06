@@ -64,7 +64,7 @@ struct DEV_BigBlind : Service::WindowCovering {
       #endif
     }
     moving = true;
-    shadeStepperBig.move(amount, forward);
+    shadeStepperBig.move(amount, !forward); // I'm reversing the direction to close the other way
   }
   
   void loop() {
